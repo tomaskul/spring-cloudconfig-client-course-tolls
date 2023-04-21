@@ -19,6 +19,16 @@ public class RateController {
     @Value("${connstring}")
     String connstring;
 
+    @RequestMapping("/")
+    public String home(){
+        return "home";
+    }
+
+    @RequestMapping("/report")
+    public String report(){
+        return "report";
+    }
+
     @RequestMapping("/rate")
     public String getRate(Model m) {
         m.addAttribute("rateamount", rate);
